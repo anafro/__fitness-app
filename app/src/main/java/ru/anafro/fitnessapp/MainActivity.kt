@@ -25,6 +25,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ru.anafro.fitnessapp.navigation.NavigationRoutes
 import ru.anafro.fitnessapp.ui.theme.FitnessAppTheme
 import ru.anafro.fitnessapp.ui.theme.*
 
@@ -47,16 +48,16 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = "auth") {
-        composable(route = "auth") {
+    NavHost(navController = navController, startDestination = NavigationRoutes.AUTH) {
+        composable(route = NavigationRoutes.AUTH) {
             Auth(navController)
         }
 
-        composable(route = "login") {
+        composable(route = NavigationRoutes.LOGIN) {
             Login(navController)
         }
 
-        composable(route = "register") {
+        composable(route = NavigationRoutes.REGISTER) {
             Register(navController)
         }
     }
@@ -85,7 +86,7 @@ fun Auth(navHostController: NavHostController) {
             .padding(30.dp)
     ) {
         Button(
-            onClick = { navHostController.navigate("login") },
+            onClick = { navHostController.navigate(NavigationRoutes.LOGIN) },
             modifier = Modifier
                 .layoutId("loginButton")
                 .padding(vertical = 6.dp)
@@ -95,7 +96,7 @@ fun Auth(navHostController: NavHostController) {
         }
 
         Button(
-            onClick = { navHostController.navigate("register") },
+            onClick = { navHostController.navigate(NavigationRoutes.REGISTER) },
             modifier = Modifier
                 .layoutId("registerButton")
                 .padding(vertical = 6.dp)
@@ -295,6 +296,6 @@ fun Back(navHostController: NavHostController) {
     Text(
         "Back",
         modifier = Modifier
-            .clickable(onClick = { navHostController.navigate("auth") })
+            .clickable(onClick = { navHostController.navigate(NavigationRoutes.AUTH) })
     )
 }
