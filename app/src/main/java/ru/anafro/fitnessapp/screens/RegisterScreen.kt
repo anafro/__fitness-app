@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.em
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.navigation.NavHostController
-import ru.anafro.fitnessapp.Back
+import ru.anafro.fitnessapp.components.auth.Back
 
 @Composable
 fun RegisterScreen(navHostController: NavHostController) {
