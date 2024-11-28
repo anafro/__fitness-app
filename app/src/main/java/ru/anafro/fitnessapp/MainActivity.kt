@@ -50,21 +50,21 @@ fun App() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = NavigationRoutes.AUTH) {
         composable(route = NavigationRoutes.AUTH) {
-            Auth(navController)
+            AuthScreen(navController)
         }
 
         composable(route = NavigationRoutes.LOGIN) {
-            Login(navController)
+            LoginScreen(navController)
         }
 
         composable(route = NavigationRoutes.REGISTER) {
-            Register(navController)
+            RegisterScreen(navController)
         }
     }
 }
 
 @Composable
-fun Auth(navHostController: NavHostController) {
+fun AuthScreen(navHostController: NavHostController) {
     val constraints = ConstraintSet {
         val margin = 8.dp
         val loginButton = createRefFor("loginButton")
@@ -108,7 +108,7 @@ fun Auth(navHostController: NavHostController) {
 }
 
 @Composable
-fun Login(navHostController: NavHostController) {
+fun LoginScreen(navHostController: NavHostController) {
     var (login, setLogin) = remember { mutableStateOf("") }
     var (password, setPassword) = remember { mutableStateOf("") }
 
@@ -179,7 +179,7 @@ fun Login(navHostController: NavHostController) {
 }
 
 @Composable
-fun Register(navHostController: NavHostController) {
+fun RegisterScreen(navHostController: NavHostController) {
     var (login, setLogin) = remember { mutableStateOf("") }
     var (password, setPassword) = remember { mutableStateOf("") }
     var (repeatPassword, setRepeatPassword) = remember { mutableStateOf("") }
