@@ -11,6 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ru.anafro.fitnessapp.navigation.NavigationRoutes
+import ru.anafro.fitnessapp.screens.ActivityScreen
 import ru.anafro.fitnessapp.screens.AuthScreen
 import ru.anafro.fitnessapp.screens.LoginScreen
 import ru.anafro.fitnessapp.screens.RegisterScreen
@@ -47,6 +48,10 @@ fun App() {
 
         composable(route = NavigationRoutes.REGISTER) {
             RegisterScreen(navController)
+        }
+
+        composable(route = NavigationRoutes.ACTIVITY) {
+            ActivityScreen(navController)
         }
     }
 }

@@ -18,6 +18,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.navigation.NavHostController
 import ru.anafro.fitnessapp.components.auth.Back
+import ru.anafro.fitnessapp.navigation.NavigationRoutes
 
 @Composable
 fun RegisterScreen(navHostController: NavHostController) {
@@ -121,7 +122,7 @@ fun RegisterScreen(navHostController: NavHostController) {
                 .fillMaxWidth()
         )
         Button(
-            onClick = {},
+            onClick = { navHostController.navigate(NavigationRoutes.ACTIVITY) },
             modifier = Modifier
                 .layoutId("registerButton")
                 .padding(vertical = 6.dp)

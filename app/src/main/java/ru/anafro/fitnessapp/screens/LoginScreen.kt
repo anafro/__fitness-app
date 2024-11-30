@@ -18,6 +18,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.navigation.NavHostController
 import ru.anafro.fitnessapp.components.auth.Back
+import ru.anafro.fitnessapp.navigation.NavigationRoutes
 
 @Composable
 fun LoginScreen(navHostController: NavHostController) {
@@ -79,7 +80,7 @@ fun LoginScreen(navHostController: NavHostController) {
                 .fillMaxWidth()
         )
         Button(
-            onClick = {},
+            onClick = { navHostController.navigate(NavigationRoutes.ACTIVITY) },
             modifier = Modifier
                 .layoutId("loginButton")
                 .padding(vertical = 6.dp)
