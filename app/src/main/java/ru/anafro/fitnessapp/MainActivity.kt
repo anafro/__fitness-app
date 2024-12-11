@@ -53,6 +53,18 @@ fun App() {
         composable(route = NavigationRoutes.ACTIVITY) {
             ActivityScreen(navController)
         }
+
+        composable(route = NavigationRoutes.CHANGE_PASSWORD) {
+            ChangePasswordScreen(navController)
+        }
+
+        composable(route = NavigationRoutes.PROFILE) {
+            ProfileScreen(navController)
+        }
+
+        composable(route = NavigationRoutes.CREATE_ACTIVITY) {
+            CreateActivityScreen(navController)
+        }
     }
 }
 
