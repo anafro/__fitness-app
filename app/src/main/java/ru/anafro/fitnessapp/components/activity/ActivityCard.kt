@@ -28,6 +28,8 @@ fun ActivityCard(distance: String = "10 км", beganAt: String = "10:00", endedA
         Row(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
         ) {
             Column {
                 Text(distance)
