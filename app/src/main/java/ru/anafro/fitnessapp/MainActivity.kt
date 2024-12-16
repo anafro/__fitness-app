@@ -59,6 +59,18 @@ fun App() {
         composable(route = "register") {
             Register(navController)
         }
+
+        composable(route = NavigationRoutes.CHANGE_PASSWORD) {
+            ChangePasswordScreen(navController)
+        }
+
+        composable(route = NavigationRoutes.PROFILE) {
+            ProfileScreen(navController)
+        }
+
+        composable(route = NavigationRoutes.CREATE_ACTIVITY) {
+            CreateActivityScreen(navController)
+        }
     }
 }
 
